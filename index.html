@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Belwise — Perfect Solutions for Your Business</title>
+    <meta name="description" content="BelWise - Tailored technology and digital solutions for businesses." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Tailwind via CDN (for quick prototype) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root{--primary:#FF6B00;--secondary:#233554}
+      html{height:100%}
+      body{
+        font-family:'Poppins',system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+        min-height:100%;
+        background-color:#f8fafc;
+        position: relative;
+      }
+      
+      /* Background image with overlay */
+      body::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('images/bg-pattern.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        opacity: 0.15;
+        z-index: -1;
+      }
+      
+      /* Optional: Add a gradient overlay */
+      body::after {
+        content: '';
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(45deg, rgba(255,107,0,0.05), rgba(35,53,84,0.05));
+        z-index: -1;
+      }
+      
+      /* small custom utilities */
+      .shadow-soft{box-shadow:0 10px 25px rgba(35,53,84,0.08)}
+      .fade-in{animation:fadeIn .5s ease-in-out}
+      @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+      .accent-btn{background:var(--primary);color:white}
+      
+      /* Section backgrounds */
+      .bg-section{
+        position: relative;
+        background-color: rgba(255,255,255,0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+      }
+      
+      .bg-section.alt{
+        background-color: rgba(249,250,251,0.95);
+      }
+      
+      /* Section transitions */
+      .bg-section {
+        transition: background-color 0.3s ease;
+      }
+      
+      .bg-section:hover {
+        background-color: rgba(255,255,255,0.98);
+      }
+    </style>
+  </head>
+  <body class="antialiased text-gray-800 fade-in">
+    <!-- Navbar -->
+    <header class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur z-50 border-b">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <a href="index.html" class="text-xl font-bold text-[var(--secondary)] flex items-center gap-2" aria-label="Belwise Home">
+            <img src="images/belwise.png" alt="Belwise Logo" class="h-12 w-24 object-contain" />
+          </a>
+          <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-700">
+            <a href="#home" class="nav-link">Home</a>
+            <a href="about.html" class="nav-link">About Us</a>
+            <a href="services.html" class="nav-link">Services</a>
+            <a href="contact.html" class="nav-link">Contact Us</a>
+          </nav>
+          <div class="md:hidden">
+            <button id="mobile-toggle" aria-label="Open menu" class="p-2 rounded-md text-gray-700 hover:bg-gray-100">☰</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="pt-20">
+      <!-- Hero -->
+
+      <section id="home" class="bg-section">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8 py-16 lg:py-24 grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+          <div>
+            <h1 class="text-4xl lg:text-5xl font-extrabold leading-tight text-gray-900">Belwise: <span class="text-[var(--primary)]">Perfect Solutions for Your Business</span></h1>
+            <p class="mt-6 text-gray-600 max-w-xl">Your trusted technology partner for Accessibility, Data Management, Digital Advertising, Mortgage Support, and App Development.</p>
+            <p class="mt-4 text-gray-600 max-w-xl">Belwise is a technology-based service and solution provider committed to customer satisfaction. We empower governments, corporate, retail, agencies, pharma, nonprofit organizations, and small-scale businesses to produce, transform, and deliver content in the most proficient way possible. We believe: "A satisfied customer is the best business strategy of all."</p>
+            <div class="mt-8 flex gap-4 flex-wrap">
+              <a href="services.html" class="inline-flex items-center px-6 py-3 rounded-full accent-btn shadow-soft">Explore Our Services</a>
+              <a href="contact.html" class="inline-flex items-center px-6 py-3 rounded-full border border-gray-300 text-gray-700">Get a Free Consultation</a>
+            </div>
+          </div>
+          <div class="flex justify-center lg:justify-end">
+            <img src="images/FP.jpg" alt="People working illustration" class="w-full max-w-lg shadow-soft rounded-lg">
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Links/Highlights -->
+      <section id="expertise" class="bg-section alt">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8 py-16 lg:py-24 grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl font-bold text-gray-900">Why Belwise is the Right Choice</h2>
+            <p class="mt-4 text-gray-600">We are more than just a service provider; we are your technology partner. Our commitment to excellence is reflected in every solution we deliver.</p>
+            <div class="mt-8 space-y-6">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-12 h-12 bg-[var(--primary)] text-white rounded-full flex items-center justify-center font-bold text-xl">1</div>
+                <div>
+                  <h4 class="font-semibold text-lg">Digital Accessibility</h4>
+                  <p class="mt-1 text-gray-600">We ensure your digital assets are compliant with ADA, WCAG 2.1, and Section 508, making them accessible to all users.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-12 h-12 bg-[var(--primary)] text-white rounded-full flex items-center justify-center font-bold text-xl">2</div>
+                <div>
+                  <h4 class="font-semibold text-lg">Data Management</h4>
+                  <p class="mt-1 text-gray-600">Our experts handle data processing, cleansing, verification, and analysis to provide you with actionable insights.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-12 h-12 bg-[var(--primary)] text-white rounded-full flex items-center justify-center font-bold text-xl">3</div>
+                <div>
+                  <h4 class="font-semibold text-lg">24/7 Support</h4>
+                  <p class="mt-1 text-gray-600">Our dedicated team offers exceptional and prompt support for all your requests and queries, anytime you need it.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-center">
+            <img src="images/WA.jpg" alt="Team working on a project" class="w-full max-w-md rounded-lg shadow-soft" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact / Footer -->
+      <footer class="bg-[var(--secondary)] text-white">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div>
+            <h5 class="font-bold text-lg">Belwise</h5>
+            <p class="mt-2 text-gray-200">Perfect Solutions for Your Business.</p>
+          </div>
+          <div>
+            <h6 class="font-semibold">Quick Links</h6>
+            <ul class="mt-3 space-y-2 text-gray-200">
+              <li><a href="#home">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </div>
+          <div>
+            <h6 class="font-semibold">Contact</h6>
+            <p class="mt-3 text-gray-200">Email: <a href="mailto:info@belwise.com" class="underline">info@belwise.com</a></p>
+            <p class="mt-2 text-gray-200">Phone: +91 1800-572-6513</p>
+          </div>
+        </div>
+        <div class="border-t border-white/10">
+          <div class="max-w-6xl mx-auto px-6 lg:px-8 py-6 text-sm text-gray-300">© 2025 Belwise. All Rights Reserved.</div>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+      // Smooth scroll for in-page links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+
+      // Mobile toggle
+      document.getElementById('mobile-toggle')?.addEventListener('click', () => {
+        document.querySelector('nav')?.classList.toggle('hidden');
+      });
+    </script>
+  </body>
+</html>

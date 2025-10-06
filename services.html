@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Our Services — Belwise</title>
+    <meta name="description" content="Explore the service portfolio of Belwise, including Digital Accessibility, Data Management, Advertising, Mortgage Services, and App Development." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root{--primary:#FF6B00;--secondary:#233554}
+      html,body{font-family:'Poppins',system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif; height: 100%; background-color: transparent;}
+      .shadow-soft{box-shadow:0 10px 25px rgba(35,53,84,0.08)}.fade-in{animation:fadeIn .5s ease-in-out}
+      @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+      .service-card {
+        transition: all 0.3s ease;
+        border: 1px solid #e5e7eb;
+      }
+      .service-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(35,53,84,0.1);
+        border-color: var(--primary);
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background: url('images/HomeBG.jpg') center/cover no-repeat;
+        opacity: 0.08;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body class="antialiased text-gray-800 fade-in">
+    <header class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur z-50 border-b">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <a href="index.html" class="text-xl font-bold text-[var(--secondary)] flex items-center gap-2" aria-label="Belwise Home">
+            <img src="images/belwise.png" alt="Belwise Logo" class="h-12 w-24 object-contain" />
+          </a>
+          <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-700">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact Us</a>
+          </nav>
+          <div class="md:hidden">
+            <button id="mobile-toggle" aria-label="Open menu" class="p-2 rounded-md text-gray-700 hover:bg-gray-100">☰</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="pt-20">
+      <!-- Hero -->
+      <section class="bg-white/80 backdrop-blur-sm">
+        <div class="max-w-4xl mx-auto px-6 lg:px-8 py-16 lg:py-24 text-center">
+        <h1 class="text-4xl lg:text-5xl font-bold text-[var(--primary)]">Our Service Portfolio</h1>
+          <p class="mt-6 text-lg text-gray-600">Belwise offers specialized services across five core domains to streamline your operations and enhance your digital presence.</p>
+        </div>
+      </section>
+
+      <!-- Services Grid -->
+      <section class="bg-gray-50/80 backdrop-blur-sm py-20">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+            <!-- 1. Digital Accessibility -->
+            <article class="service-card bg-white p-8 rounded-xl">
+              <h2 class="text-2xl font-bold text-[var(--primary)] mb-4">1. Digital Accessibility</h2>
+              <p class="text-gray-700 mb-4"><strong>Focus:</strong> Aiding organizations to access any content with ease and ensuring compliance with global standards.</p>
+              <p class="text-gray-700 mb-6"><strong>Standards:</strong> Conformity with accessibility regulations such as ADA, WCAG 2.1, and Section 508.</p>
+              <h3 class="font-semibold text-gray-800 mb-3">Services:</h3>
+              <ul class="list-disc list-inside text-gray-600 space-y-2">
+                <li>PDF Accessibility</li>
+                <li>Word Accessibility</li>
+                <li>PPT Accessibility Services</li>
+              </ul>
+            </article>
+
+            <!-- 2. Data Management -->
+            <article class="service-card bg-white p-8 rounded-xl">
+              <h2 class="text-2xl font-bold text-[var(--primary)] mb-4">2. Data Management</h2>
+              <p class="text-gray-700 mb-6"><strong>Focus:</strong> Turning raw data into actionable insights through precise processing, conversion, and analysis.</p>
+              <h3 class="font-semibold text-gray-800 mb-3">Services:</h3>
+              <ul class="list-disc list-inside text-gray-600 space-y-2">
+                <li>Data Audit & Analysis</li>
+                <li>Data Compilation & Rationalization</li>
+                <li>Data Enrichment & Maintenance</li>
+                <li>Operations Outsourcing</li>
+              </ul>
+            </article>
+
+            <!-- 3. Advertisement -->
+            <article class="service-card bg-white p-8 rounded-xl">
+              <h2 class="text-2xl font-bold text-[var(--primary)] mb-4">3. Advertisement</h2>
+              <p class="text-gray-700 mb-6"><strong>Focus:</strong> Boosting your brand presence and market penetration through effective digital strategies.</p>
+              <h3 class="font-semibold text-gray-800 mb-3">Services:</h3>
+              <ul class="list-disc list-inside text-gray-600 space-y-2">
+                <li>Digital Marketing (Website, Email, Tele Marketing, Social Media, Video, and SEO)</li>
+                <li>Content Marketing</li>
+                <li>Designing, VFX & Animation</li>
+              </ul>
+            </article>
+
+            <!-- 4. Mortgage Services -->
+            <article class="service-card bg-white p-8 rounded-xl">
+              <h2 class="text-2xl font-bold text-[var(--primary)] mb-4">4. Mortgage Services</h2>
+              <p class="text-gray-700 mb-6"><strong>Focus:</strong> Providing personalized data and document services to quicken loan processing and boost productivity for mortgage companies.</p>
+              <h3 class="font-semibold text-gray-800 mb-3">Services:</h3>
+              <ul class="list-disc list-inside text-gray-600 space-y-2">
+                <li>Mortgage Forms Processing</li>
+                <li>Deed Processing for Mortgage</li>
+                <li>Mortgage Foreclosure Data Entry</li>
+                <li>Mortgage Claims Processing</li>
+                <li>Data Mining / Collection</li>
+                <li>Invoice, Bills Entry</li>
+              </ul>
+            </article>
+
+            <!-- 5. Apps Development -->
+            <article class="service-card bg-white p-8 rounded-xl lg:col-span-2">
+              <h2 class="text-2xl font-bold text-[var(--primary)] mb-4">5. Apps Development</h2>
+              <p class="text-gray-700 mb-6"><strong>Focus:</strong> Designing and developing robust, feature-rich applications for all your business needs.</p>
+              <h3 class="font-semibold text-gray-800 mb-3">Services:</h3>
+              <ul class="list-disc list-inside text-gray-600 space-y-2">
+                <li>Mobile Apps Development (iOS & Android)</li>
+                <li>Web Apps Development</li>
+              </ul>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="bg-[var(--secondary)] text-white">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div>
+            <h5 class="font-bold text-lg">Belwise</h5>
+            <p class="mt-2 text-gray-200">Perfect Solutions for Your Business.</p>
+          </div>
+          <div>
+            <h6 class="font-semibold">Quick Links</h6>
+            <ul class="mt-3 space-y-2 text-gray-200">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h6 class="font-semibold">Contact</h6>
+            <p class="mt-3 text-gray-200">Email: <a href="mailto:info@belwise.com" class="underline">info@belwise.com</a></p>
+            <p class="mt-2 text-gray-200">Phone: +91 1800-572-6513</p>
+          </div>
+        </div>
+        <div class="border-t border-white/10">
+          <div class="max-w-6xl mx-auto px-6 lg:px-8 py-6 text-sm text-gray-300">© 2025 Belwise. All Rights Reserved.</div>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+      // Smooth scroll for in-page links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+      // Mobile toggle
+      document.getElementById('mobile-toggle')?.addEventListener('click', () => {
+        document.querySelector('nav')?.classList.toggle('hidden');
+      });
+    </script>
+  </body>
+</html>

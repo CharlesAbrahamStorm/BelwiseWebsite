@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About Us — Belwise</title>
+    <meta name="description" content="Learn about Belwise - our mission, services, and pillars of excellence in technology solutions." />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      :root{--primary:#FF6B00;--secondary:#233554}
+      html,body{font-family:'Poppins',system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif; height: 100%; background-color: transparent;}
+      .shadow-soft{box-shadow:0 10px 25px rgba(35,53,84,0.08)}.fade-in{animation:fadeIn .5s ease-in-out}
+      @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+      
+      /* Animations */
+      .fade-up {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+      }
+      .fade-up.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      
+      /* Icon hover effects */
+      .icon-wrapper {
+        transition: transform 0.3s ease;
+      }
+      .icon-wrapper:hover {
+        transform: scale(1.1);
+      }
+      
+      /* Card hover effects */
+      .vision-card {
+        transition: all 0.3s ease;
+        background: white;
+        border: 1px solid rgba(0,0,0,0.1);
+      }
+      .vision-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 15px 30px rgba(35,53,84,0.1);
+        border-color: var(--primary);
+      }
+      
+      /* Icon pulse animation */
+      .pulse {
+        animation: pulse 2s infinite;
+      }
+      @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        background: url('images/HomeBG.jpg') center/cover no-repeat;
+        opacity: 0.08;
+        pointer-events: none;
+      }
+    </style>
+  </head>
+  <body class="antialiased text-gray-800 fade-in">
+    <header class="fixed top-0 left-0 right-0 bg-white/90 backdrop-blur z-50 border-b">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <a href="index.html" class="text-xl font-bold text-[var(--secondary)] flex items-center gap-2" aria-label="Belwise Home">
+            <img src="images/belwise.png" alt="Belwise Logo" class="h-12 w-24 object-contain" />
+          </a>
+          <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-700">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="services.html">Services</a>
+            <a href="contact.html">Contact Us</a>
+          </nav>
+          <div class="md:hidden">
+            <button id="mobile-toggle" aria-label="Open menu" class="p-2 rounded-md text-gray-700 hover:bg-gray-100">☰</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="pt-20">
+      <!-- Hero -->
+    <section class="bg-white/80 backdrop-blur-sm">
+      <div class="max-w-6xl mx-auto px-6 lg:px-8 py-16 lg:py-24 grid lg:grid-cols-2 gap-12 items-center">
+        <div class="text-center lg:text-left">
+          <h1 class="text-4xl lg:text-5xl font-bold text-[var(--secondary)]">
+            The Belwise Story: <span class="text-[var(--primary)]">Driven by Technology, Defined by Service</span>
+          </h1>
+          <p class="mt-6 max-w-2xl mx-auto lg:mx-0 text-gray-600">Belwise was founded on the principle that technology should be an enabler, not a barrier. Our journey began with a small team of passionate innovators dedicated to creating accessible, data-driven solutions that empower businesses to thrive in a digital-first world.</p>
+        </div>
+        <div class="flex justify-center">
+          <img src="images/ABTUS.png" alt="The Belwise Team in a modern office" class="rounded-xl shadow-soft w-full max-w-md object-cover" />
+        </div>
+      </div>
+    </section>
+
+      <!-- Vision Mission Goal -->
+      <section class="bg-gray-50/80 backdrop-blur-sm py-20">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8">
+          <h2 class="text-3xl font-bold text-center text-[var(--secondary)] mb-16 fade-up">Our Core Values</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
+            <!-- Vision -->
+            <div class="vision-card rounded-xl p-8 fade-up" style="transition-delay: 0.1s">
+              <div class="icon-wrapper w-20 h-20 mx-auto mb-8 bg-[var(--primary)]/10 rounded-full p-4">
+                <svg viewBox="0 0 24 24" class="w-full h-full text-[var(--primary)] pulse">
+                  <path fill="currentColor" d="M12 4.5c-4 0-7.2 3.1-8.8 7.5 1.6 4.4 4.8 7.5 8.8 7.5s7.2-3.1 8.8-7.5c-1.6-4.4-4.8-7.5-8.8-7.5zm0 12.5c-2.8 0-5-2.2-5-5s2.2-5 5-5 5 2.2 5 5-2.2 5-5 5zm0-8c-1.7 0-3 1.3-3 3s1.3 3 3 3 3-1.3 3-3-1.3-3-3-3z"/>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-[var(--secondary)] mb-4">Our Vision</h3>
+              <p class="text-gray-600 leading-relaxed">To evangelize Belwise, as a world class consulting services, who can elevate the most oppressed to top notch characters. We need to make foreign education accessible to each grade of individuals.</p>
+            </div> 
+
+            <!-- Mission -->
+            <div class="vision-card rounded-xl p-8 fade-up" style="transition-delay: 0.3s">
+              <div class="icon-wrapper w-20 h-20 mx-auto mb-8 bg-[var(--primary)]/10 rounded-full p-4">
+                <svg viewBox="0 0 24 24" class="w-full h-full text-[var(--primary)] pulse">
+                  <path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm4.6-12.4L10 14.2l-2.6-2.6L6 13l4 4 8-8z"/>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-[var(--secondary)] mb-4">Our Mission</h3>
+              <p class="text-gray-600 leading-relaxed">Our motto is to consistently create and improve holistic and innovative personalities for worldwide portability. We strive for the organic growth of our organization through integrity, honesty, and excellence.</p>
+            </div>
+
+            <!-- Goal -->
+            <div class="vision-card rounded-xl p-8 fade-up" style="transition-delay: 0.5s">
+              <div class="icon-wrapper w-20 h-20 mx-auto mb-8 bg-[var(--primary)]/10 rounded-full p-4">
+                <svg viewBox="0 0 24 24" class="w-full h-full text-[var(--primary)] pulse">
+                  <path fill="currentColor" d="M12 2L2 12l1.4 1.4L12 4.8l8.6 8.6L22 12zm0 3.8L6.8 12 12 17.2l5.2-5.2z"/>
+                </svg>
+              </div>
+              <h3 class="text-2xl font-bold text-[var(--secondary)] mb-4">Our Goal</h3>
+              <p class="text-gray-600 leading-relaxed">Belwise has confidence in building solid and cordial relationships with its representatives, universities, clients, parent organizations and partner consultants. We aim to achieve the Vision and Mission through the objective to acquire the adequate knowledge about the study destinations, the institutions, and the programs to provide quality counseling and guidance.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mission Statement -->
+      <section class="bg-[var(--secondary)] text-white">
+        <div class="max-w-3xl mx-auto px-6 lg:px-8 py-16 text-center">
+          <h2 class="text-2xl font-bold">Our Mission Statement</h2>
+          <p class="mt-6 text-gray-100">Our mission is simple: to gain happy customers. We operate on the core belief that "A satisfied customer is the best business strategy of all." We strive to build integrated leadership, offer exceptional support, and uphold an authentic and transparent business strategy in all our dealings.</p>
+        </div>
+      </section>
+
+      <!-- What We Do -->
+      <section class="bg-white/80 backdrop-blur-sm">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8 py-20 grid lg:grid-cols-2 gap-12 items-center">
+          <div>
+            <h2 class="text-3xl font-bold text-[var(--secondary)] mb-6">What We Do</h2>
+            <p class="text-gray-600 mb-8">Belwise is an integrated technology and service provider. We leverage profound knowledge and customer gratification to deliver results across critical business needs, including:</p>
+            <div class="space-y-4">
+              <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                <svg class="w-6 h-6 text-[var(--primary)] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                <div>
+                  <h3 class="font-semibold">Content Accessibility</h3>
+                  <p class="text-sm text-gray-600">PDF, Word, PPT conversion and accessibility solutions</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                <svg class="w-6 h-6 text-[var(--primary)] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 1.1.9 2 2 2h12a2 2 0 002-2V7M4 7a2 2 0 012-2h4l2 2h4a2 2 0 012 2v1"/></svg>
+                <div>
+                  <h3 class="font-semibold">Data Management</h3>
+                  <p class="text-sm text-gray-600">Analysis, Conversion, Enrichment</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                <svg class="w-6 h-6 text-[var(--primary)] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5.882V19.24a1.76 1.76 0 01-3.417.592l-2.148-6.362a1.76 1.76 0 011.164-2.312l5.04-1.76a1.76 1.76 0 012.312 1.164z"/></svg>
+                <div>
+                  <h3 class="font-semibold">Advertisement & Digital Marketing</h3>
+                  <p class="text-sm text-gray-600">Comprehensive digital marketing solutions</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                <svg class="w-6 h-6 text-[var(--primary)] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+                <div>
+                  <h3 class="font-semibold">Mortgage Support Services</h3>
+                  <p class="text-sm text-gray-600">End-to-end mortgage processing support</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-4 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                <svg class="w-6 h-6 text-[var(--primary)] flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/></svg>
+                <div>
+                  <h3 class="font-semibold">App Development</h3>
+                  <p class="text-sm text-gray-600">Android & iOS mobile applications</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-center items-center mt-12 lg:mt-0">
+            <img src="images/VEC.jpg" alt="Illustration of services" class="w-full max-w-md rounded-lg shadow-soft"/>
+          </div>
+        </div>
+      </section>
+
+      <!-- Pillars -->
+      <section class="bg-gray-50/80 backdrop-blur-sm">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8 py-20">
+          <h2 class="text-3xl font-bold text-center text-[var(--secondary)] mb-16 fade-up">Our Pillars of Excellence</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Skillful Management -->
+            <div class="text-center p-6 fade-up" style="transition-delay: 0.1s">
+              <div class="icon-wrapper w-24 h-24 mx-auto mb-6 bg-white rounded-full p-5 shadow-soft">
+                <svg class="w-full h-full text-[var(--primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m12 0a2 2 0 100-4m0 4a2 2 0 110-4M6 20v-2a2 2 0 114 0v2m4-2a2 2 0 100-4m0 4a2 2 0 110-4m4 4v-2a2 2 0 10-4 0v2"/></svg>
+              </div>
+              <h3 class="text-xl font-bold text-[var(--secondary)] mb-3">Skillful Management</h3>
+              <p class="text-gray-600">Guided by an experienced team, we ensure every project is a success from start to finish.</p>
+            </div>
+
+            <!-- Integrated Leadership -->
+            <div class="text-center p-6 fade-up" style="transition-delay: 0.3s">
+              <div class="icon-wrapper w-24 h-24 mx-auto mb-6 bg-white rounded-full p-5 shadow-soft">
+                <svg class="w-full h-full text-[var(--primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+              </div>
+              <h3 class="text-xl font-bold text-[var(--secondary)] mb-3">Integrated Leadership</h3>
+              <p class="text-gray-600">We optimize our team’s talents for complex and renowned projects, ensuring seamless execution.</p>
+            </div>
+
+            <!-- Prolific & Exceptional Support -->
+            <div class="text-center p-6 fade-up" style="transition-delay: 0.5s">
+              <div class="icon-wrapper w-24 h-24 mx-auto mb-6 bg-white rounded-full p-5 shadow-soft">
+                <svg class="w-full h-full text-[var(--primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 10h.01M15 10h.01M9 14h6"/></svg>
+              </div>
+              <h3 class="text-xl font-bold text-[var(--secondary)] mb-3">Exceptional Support</h3>
+              <p class="text-gray-600">Our 24/7 professional support team is equipped with the skills and resources to assist you anytime.</p>
+            </div>
+
+            <!-- Authentic & Transparent -->
+            <div class="text-center p-6 fade-up" style="transition-delay: 0.7s">
+              <div class="icon-wrapper w-24 h-24 mx-auto mb-6 bg-white rounded-full p-5 shadow-soft">
+                <svg class="w-full h-full text-[var(--primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              </div>
+              <h3 class="text-xl font-bold text-[var(--secondary)] mb-3">Authentic & Transparent</h3>
+              <p class="text-gray-600">We maintain clear communication on our work progress, adhering to strict timelines and budgets.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Industries -->
+      <section class="bg-white/80 backdrop-blur-sm">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8 py-16">
+          <h2 class="text-2xl font-bold text-center mb-8">Industries We Serve</h2>
+          <div class="max-w-4xl mx-auto">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+              <!-- Publishing -->
+              <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                <svg class="w-6 h-6 text-[var(--primary)]" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M21 5c-1.11-.35-2.33-.5-3.5-.5-1.95 0-4.05.4-5.5 1.5-1.45-1.1-3.55-1.5-5.5-1.5-1.95 0-4.05.4-5.5 1.5v14.65c0 .25.25.5.5.5.1 0 .15-.05.25-.05C3.1 20.45 5.05 20 6.5 20c1.95 0 4.05.4 5.5 1.5 1.35-.85 3.8-1.5 5.5-1.5 1.65 0 3.35.3 4.75 1.05.1.05.15.05.25.05.25 0 .5-.25.5-.5V6c-.6-.45-1.25-.75-2-1zm0 13.5c-1.1-.35-2.3-.5-3.5-.5-1.7 0-4.15.65-5.5 1.5V8c1.35-.85 3.8-1.5 5.5-1.5 1.2 0 2.4.15 3.5.5v11.5z"/>
+                </svg>
+                <span>Publishing</span>
+              </div>
+              
+              <!-- Advertisement -->
+              <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                <svg class="w-6 h-6 text-[var(--primary)]" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H3V5h18v14zM8 15c0-1.66 1.34-3 3-3 .35 0 .69.07 1 .18V6h5v2h-3v7.03c-.02 1.64-1.35 2.97-3 2.97-1.66 0-3-1.34-3-3z"/>
+                </svg>
+                <span>Advertisement</span>
+              </div>
+              
+              <!-- Retail -->
+              <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                <svg class="w-6 h-6 text-[var(--primary)]" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M20 4H4v2h16V4zm1 10v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6h1zm-9 4H6v-4h6v4z"/>
+                </svg>
+                <span>Retail</span>
+              </div>
+              
+              <!-- Corporate -->
+              <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                <svg class="w-6 h-6 text-[var(--primary)]" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 7V3H2v18h20V7H12zM6 19H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm4 12H8v-2h2v2zm0-4H8v-2h2v2zm0-4H8V9h2v2zm0-4H8V5h2v2zm10 12h-8v-2h2v-2h-2v-2h2v-2h-2V9h8v10zm-2-8h-2v2h2v-2zm0 4h-2v2h2v-2z"/>
+                </svg>
+                <span>Corporate</span>
+              </div>
+              
+              <!-- Government -->
+              <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                <svg class="w-6 h-6 text-[var(--primary)]" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2l-5.5 9h11L12 2zm0 3.84L13.93 9h-3.87L12 5.84zM17.5 13c-2.49 0-4.5 2.01-4.5 4.5s2.01 4.5 4.5 4.5 4.5-2.01 4.5-4.5-2.01-4.5-4.5-4.5zm0 7c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5zM3 21.5h8v-8H3v8zm2-6h4v4H5v-4z"/>
+                </svg>
+                <span>Government</span>
+              </div>
+              
+              <!-- NGOs -->
+              <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                <svg class="w-6 h-6 text-[var(--primary)]" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm4.78-6.5c-.88 2.03-2.9 3.5-5.28 3.5s-4.4-1.47-5.28-3.5H4.5c1.04 3.15 3.97 5.5 7.5 5.5s6.46-2.35 7.5-5.5h-1.72z"/>
+                </svg>
+                <span>NGOs</span>
+              </div>
+              
+              <!-- SME -->
+              <div class="flex items-center gap-3 p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors">
+                <svg class="w-6 h-6 text-[var(--primary)]" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M21 5V3H3v2l8 9v5H6v2h12v-2h-5v-5l8-9zM7.43 7L5.66 5h12.69l-1.78 2H7.43z"/>
+                </svg>
+                <span>SME</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer class="bg-[var(--secondary)] text-white">
+        <div class="max-w-6xl mx-auto px-6 lg:px-8 py-12 grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div>
+            <h5 class="font-bold text-lg">Belwise</h5>
+            <p class="mt-2 text-gray-200">Perfect Solutions for Your Business.</p>
+          </div>
+          <div>
+            <h6 class="font-semibold">Quick Links</h6>
+            <ul class="mt-3 space-y-2 text-gray-200">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h6 class="font-semibold">Contact</h6>
+            <p class="mt-3 text-gray-200">Email: <a href="mailto:info@belwise.com" class="underline">info@belwise.com</a></p>
+            <p class="mt-2 text-gray-200">Phone: +91 1800-572-6513</p>
+          </div>
+        </div>
+        <div class="border-t border-white/10">
+          <div class="max-w-6xl mx-auto px-6 lg:px-8 py-6 text-sm text-gray-300">© 2025 Belwise. All Rights Reserved.</div>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+      // Scroll animations
+      const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); // Stop observing once visible
+          }
+        });
+      }, observerOptions);
+      // Observe all fade-up elements
+      document.querySelectorAll('.fade-up').forEach((element) => {
+        observer.observe(element);
+      });
+
+      // Mobile toggle
+      document.getElementById('mobile-toggle')?.addEventListener('click', () => {
+        document.querySelector('nav')?.classList.toggle('hidden');
+      });
+
+      // Smooth scroll for in-page links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href'))?.scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+    </script>
+  </body>
+</html>
